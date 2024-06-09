@@ -1,0 +1,1416 @@
+2024-06-03 20:45:39,359 - discord.client - ERROR - Attempting a reconnect in 270.41s
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 1152, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/asyncio/base_events.py", line 867, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/socket.py", line 962, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/discord/client.py", line 656, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/asyncio/tasks.py", line 479, in wait_for
+    return fut.result()
+           ^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/discord/http.py", line 536, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 1166, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [Temporary failure in name resolution]
+2024-06-03 20:47:20,678 - discord_bot - ERROR - Failed to purge or send message in people-in-studio: Cannot connect to host discord.com:443 ssl:default [Temporary failure in name resolution]
+2024-06-03 20:49:20,681 - discord_bot - ERROR - Failed to purge or send message in people-in-studio: Cannot connect to host discord.com:443 ssl:default [Temporary failure in name resolution]
+2024-06-03 20:50:09,823 - discord.client - ERROR - Attempting a reconnect in 673.90s
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 1152, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/asyncio/base_events.py", line 867, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/socket.py", line 962, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/discord/client.py", line 656, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/asyncio/tasks.py", line 479, in wait_for
+    return fut.result()
+           ^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/discord/http.py", line 536, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 1166, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [Temporary failure in name resolution]
+2024-06-03 20:51:20,687 - discord_bot - ERROR - Failed to purge or send message in people-in-studio: Cannot connect to host discord.com:443 ssl:default [Temporary failure in name resolution]
+2024-06-03 21:27:34,484 - discord.client - WARNING - PyNaCl is not installed, voice will NOT be supported
+2024-06-03 21:27:34,490 - discord.client - INFO - logging in using static token
+2024-06-03 21:27:39,356 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 76b748254c895aa01088801622958c7e).
+2024-06-03 21:27:43,434 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+192.168.0.1	6a:89:aa:10:cc:cb	(Unknown: locally administered)
+192.168.0.3	d8:3a:dd:3f:a8:3d	Raspberry Pi Trading Ltd
+192.168.0.2	28:cd:c1:0d:76:51	Raspberry Pi Trading Ltd
+192.168.0.9	a4:77:f3:07:1a:dd	Apple, Inc.
+
+2024-06-03 21:57:43,218 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+192.168.0.9	a4:77:f3:07:1a:dd	Apple, Inc.
+192.168.0.1	6a:89:aa:10:cc:cb	(Unknown: locally administered)
+192.168.0.2	28:cd:c1:0d:76:51	Raspberry Pi Trading Ltd
+192.168.0.3	d8:3a:dd:3f:a8:3d	Raspberry Pi Trading Ltd
+
+2024-06-03 22:07:01,538 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+192.168.0.1	6a:89:aa:10:cc:cb	(Unknown: locally administered)
+192.168.0.2	28:cd:c1:0d:76:51	Raspberry Pi Trading Ltd
+192.168.0.3	d8:3a:dd:3f:a8:3d	Raspberry Pi Trading Ltd
+192.168.0.9	a4:77:f3:07:1a:dd	Apple, Inc.
+
+2024-06-03 23:57:39,994 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+
+2024-06-03 23:58:13,410 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+
+2024-06-04 00:11:35,638 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+192.168.0.1	6a:89:aa:10:cc:cb	(Unknown: locally administered)
+192.168.0.3	d8:3a:dd:3f:a8:3d	Raspberry Pi Trading Ltd
+192.168.0.9	a4:77:f3:07:1a:dd	Apple, Inc.
+192.168.0.2	28:cd:c1:0d:76:51	Raspberry Pi Trading Ltd
+
+2024-06-04 00:14:56,172 - discord.client - ERROR - Attempting a reconnect in 1.31s
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/discord/client.py", line 659, in connect
+    await self.ws.poll_event()
+  File "/usr/lib/python3/dist-packages/discord/gateway.py", line 646, in poll_event
+    raise ConnectionClosed(self.socket, shard_id=self.shard_id, code=code) from None
+discord.errors.ConnectionClosed: Shard ID None WebSocket closed with 1000
+2024-06-04 00:14:58,692 - discord.gateway - INFO - Shard ID None has successfully RESUMED session 76b748254c895aa01088801622958c7e.
+2024-06-04 00:39:35,790 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+192.168.0.1	6a:89:aa:10:cc:cb	(Unknown: locally administered)
+192.168.0.2	28:cd:c1:0d:76:51	Raspberry Pi Trading Ltd
+192.168.0.9	a4:77:f3:07:1a:dd	Apple, Inc.
+192.168.0.3	d8:3a:dd:3f:a8:3d	Raspberry Pi Trading Ltd
+192.168.0.4	92:68:56:7d:a1:00	(Unknown: locally administered)
+
+2024-06-04 00:42:43,194 - discord.gateway - INFO - Shard ID None has successfully RESUMED session 76b748254c895aa01088801622958c7e.
+2024-06-04 01:57:39,754 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+
+2024-06-04 02:08:23,847 - discord.gateway - INFO - Shard ID None has successfully RESUMED session 76b748254c895aa01088801622958c7e.
+2024-06-04 02:33:35,878 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+192.168.0.1	6a:89:aa:10:cc:cb	(Unknown: locally administered)
+192.168.0.3	d8:3a:dd:3f:a8:3d	Raspberry Pi Trading Ltd
+192.168.0.2	28:cd:c1:0d:76:51	Raspberry Pi Trading Ltd
+
+2024-06-04 02:58:10,706 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+
+2024-06-04 02:58:29,182 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+
+2024-06-04 03:18:38,562 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+192.168.0.1	6a:89:aa:10:cc:cb	(Unknown: locally administered)
+192.168.0.2	28:cd:c1:0d:76:51	Raspberry Pi Trading Ltd
+192.168.0.3	d8:3a:dd:3f:a8:3d	Raspberry Pi Trading Ltd
+
+2024-06-04 03:55:31,415 - discord.gateway - INFO - Shard ID None has successfully RESUMED session 76b748254c895aa01088801622958c7e.
+2024-06-04 05:35:07,585 - discord.gateway - INFO - Shard ID None has successfully RESUMED session 76b748254c895aa01088801622958c7e.
+2024-06-04 08:45:46,584 - discord.gateway - INFO - Shard ID None has successfully RESUMED session 76b748254c895aa01088801622958c7e.
+2024-06-04 08:57:39,202 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+
+2024-06-04 08:57:57,814 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+
+2024-06-04 08:58:46,202 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+192.168.0.1	6a:89:aa:10:cc:cb	(Unknown: locally administered)
+
+2024-06-04 10:49:36,374 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+192.168.0.1	6a:89:aa:10:cc:cb	(Unknown: locally administered)
+192.168.0.3	d8:3a:dd:3f:a8:3d	Raspberry Pi Trading Ltd
+192.168.0.2	28:cd:c1:0d:76:51	Raspberry Pi Trading Ltd
+
+2024-06-04 11:12:38,018 - discord.gateway - INFO - Shard ID None has successfully RESUMED session 76b748254c895aa01088801622958c7e.
+2024-06-04 11:58:54,774 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+
+2024-06-04 13:35:35,777 - discord_bot - ERROR - Failed to purge or send message in people-in-studio: Cannot connect to host discord.com:443 ssl:default [Temporary failure in name resolution]
+2024-06-04 13:37:01,566 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+192.168.0.1	6a:89:aa:10:cc:cb	(Unknown: locally administered)
+192.168.0.4	92:68:56:7d:a1:00	(Unknown: locally administered)
+192.168.0.9	a4:77:f3:07:1a:dd	Apple, Inc.
+192.168.0.2	28:cd:c1:0d:76:51	Raspberry Pi Trading Ltd
+192.168.0.3	d8:3a:dd:3f:a8:3d	Raspberry Pi Trading Ltd
+
+2024-06-04 14:40:39,785 - discord.gateway - INFO - Shard ID None has successfully RESUMED session 76b748254c895aa01088801622958c7e.
+2024-06-04 14:57:01,514 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+192.168.0.1	6a:89:aa:10:cc:cb	(Unknown: locally administered)
+192.168.0.3	d8:3a:dd:3f:a8:3d	Raspberry Pi Trading Ltd
+192.168.0.4	92:68:56:7d:a1:00	(Unknown: locally administered)
+192.168.0.2	28:cd:c1:0d:76:51	Raspberry Pi Trading Ltd
+192.168.0.9	a4:77:f3:07:1a:dd	Apple, Inc.
+
+2024-06-04 14:57:56,978 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+
+2024-06-04 14:58:59,826 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+
+2024-06-04 15:26:44,370 - discord.gateway - INFO - Shard ID None has successfully RESUMED session 76b748254c895aa01088801622958c7e.
+2024-06-04 16:02:22,162 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+192.168.0.1	6a:89:aa:10:cc:cb	(Unknown: locally administered)
+192.168.0.2	28:cd:c1:0d:76:51	Raspberry Pi Trading Ltd
+192.168.0.3	d8:3a:dd:3f:a8:3d	Raspberry Pi Trading Ltd
+
+2024-06-04 16:11:37,055 - discord.gateway - INFO - Shard ID None has successfully RESUMED session 76b748254c895aa01088801622958c7e.
+2024-06-04 16:34:40,037 - discord.gateway - INFO - Shard ID None has successfully RESUMED session 76b748254c895aa01088801622958c7e.
+2024-06-04 16:41:44,920 - discord.gateway - INFO - Shard ID None has successfully RESUMED session 76b748254c895aa01088801622958c7e.
+2024-06-04 16:41:58,554 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+
+2024-06-04 16:57:41,482 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+
+2024-06-04 17:41:20,990 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+192.168.0.1	6a:89:aa:10:cc:cb	(Unknown: locally administered)
+192.168.0.3	d8:3a:dd:3f:a8:3d	Raspberry Pi Trading Ltd
+192.168.0.2	28:cd:c1:0d:76:51	Raspberry Pi Trading Ltd
+
+2024-06-04 17:55:09,914 - discord.gateway - INFO - Shard ID None has successfully RESUMED session 76b748254c895aa01088801622958c7e.
+2024-06-04 17:59:08,922 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+
+2024-06-04 18:55:30,694 - discord.gateway - INFO - Shard ID None has successfully RESUMED session 76b748254c895aa01088801622958c7e.
+2024-06-04 19:19:57,094 - discord.gateway - INFO - Shard ID None has successfully RESUMED session 76b748254c895aa01088801622958c7e.
+2024-06-04 20:57:43,290 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+192.168.0.1	6a:89:aa:10:cc:cb	(Unknown: locally administered)
+
+2024-06-04 20:57:54,662 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+192.168.0.1	6a:89:aa:10:cc:cb	(Unknown: locally administered)
+192.168.0.3	d8:3a:dd:3f:a8:3d	Raspberry Pi Trading Ltd
+192.168.0.2	28:cd:c1:0d:76:51	Raspberry Pi Trading Ltd
+
+2024-06-04 21:22:22,562 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+
+2024-06-04 21:37:01,622 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+192.168.0.1	6a:89:aa:10:cc:cb	(Unknown: locally administered)
+
+2024-06-04 22:15:45,637 - discord.gateway - INFO - Shard ID None has successfully RESUMED session 76b748254c895aa01088801622958c7e.
+2024-06-04 23:55:37,342 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+192.168.0.1	6a:89:aa:10:cc:cb	(Unknown: locally administered)
+
+2024-06-05 00:57:40,086 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+
+2024-06-05 01:13:22,820 - discord.gateway - INFO - Shard ID None has successfully RESUMED session 76b748254c895aa01088801622958c7e.
+2024-06-05 01:57:01,574 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+192.168.0.1	6a:89:aa:10:cc:cb	(Unknown: locally administered)
+
+2024-06-05 02:03:37,530 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+192.168.0.1	6a:89:aa:10:cc:cb	(Unknown: locally administered)
+
+2024-06-05 02:57:39,794 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+
+2024-06-05 02:57:50,922 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+
+2024-06-05 02:58:02,106 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+
+2024-06-05 03:32:22,074 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+192.168.0.1	6a:89:aa:10:cc:cb	(Unknown: locally administered)
+
+2024-06-05 04:31:17,159 - discord.gateway - INFO - Shard ID None has successfully RESUMED session 76b748254c895aa01088801622958c7e.
+2024-06-05 05:43:38,794 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+192.168.0.1	6a:89:aa:10:cc:cb	(Unknown: locally administered)
+
+2024-06-05 05:57:37,510 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+
+2024-06-05 06:41:13,006 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+192.168.0.1	6a:89:aa:10:cc:cb	(Unknown: locally administered)
+
+2024-06-05 06:57:39,670 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+
+2024-06-05 07:03:08,716 - discord.gateway - INFO - Shard ID None has successfully RESUMED session 76b748254c895aa01088801622958c7e.
+2024-06-05 08:57:37,802 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+
+2024-06-05 08:57:48,934 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+
+2024-06-05 08:58:00,142 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+
+2024-06-05 11:00:28,174 - discord.gateway - INFO - Shard ID None has successfully RESUMED session 76b748254c895aa01088801622958c7e.
+2024-06-05 11:40:35,898 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+
+2024-06-05 11:41:41,723 - discord.gateway - INFO - Shard ID None has successfully RESUMED session 76b748254c895aa01088801622958c7e.
+2024-06-05 12:45:43,302 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+192.168.0.1	6a:89:aa:10:cc:cb	(Unknown: locally administered)
+192.168.0.2	28:cd:c1:0d:76:51	Raspberry Pi Trading Ltd
+
+2024-06-05 13:18:58,551 - discord_bot - ERROR - Failed to purge or send message in people-in-studio: 404 Not Found (error code: 10008): Unknown Message
+2024-06-05 13:27:29,205 - discord.gateway - INFO - Shard ID None has successfully RESUMED session 76b748254c895aa01088801622958c7e.
+2024-06-05 14:57:42,398 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+
+2024-06-05 14:57:53,646 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+
+2024-06-05 14:58:04,814 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+
+2024-06-05 15:07:01,538 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+192.168.0.1	6a:89:aa:10:cc:cb	(Unknown: locally administered)
+192.168.0.2	28:cd:c1:0d:76:51	Raspberry Pi Trading Ltd
+
+2024-06-05 15:57:37,402 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+192.168.0.1	6a:89:aa:10:cc:cb	(Unknown: locally administered)
+
+2024-06-05 17:00:56,987 - discord.gateway - INFO - Shard ID None has successfully RESUMED session 76b748254c895aa01088801622958c7e.
+2024-06-05 17:52:41,174 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+192.168.0.1	6a:89:aa:10:cc:cb	(Unknown: locally administered)
+192.168.0.2	28:cd:c1:0d:76:51	Raspberry Pi Trading Ltd
+
+2024-06-05 18:00:01,586 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+192.168.0.1	6a:89:aa:10:cc:cb	(Unknown: locally administered)
+192.168.0.2	28:cd:c1:0d:76:51	Raspberry Pi Trading Ltd
+
+2024-06-05 18:54:41,050 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+192.168.0.1	6a:89:aa:10:cc:cb	(Unknown: locally administered)
+192.168.0.2	28:cd:c1:0d:76:51	Raspberry Pi Trading Ltd
+
+2024-06-05 20:01:08,078 - discord.gateway - INFO - Shard ID None has successfully RESUMED session 76b748254c895aa01088801622958c7e.
+2024-06-05 20:53:39,062 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+192.168.0.1	6a:89:aa:10:cc:cb	(Unknown: locally administered)
+192.168.0.4	d8:3a:dd:3f:a8:3d	Raspberry Pi Trading Ltd
+192.168.0.2	28:cd:c1:0d:76:51	Raspberry Pi Trading Ltd
+
+2024-06-05 20:57:39,466 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+
+2024-06-05 20:57:51,090 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+
+2024-06-05 20:58:02,346 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+
+2024-06-05 21:28:17,542 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+
+2024-06-05 21:28:28,762 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+
+2024-06-05 21:28:39,870 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+192.168.0.1	6a:89:aa:10:cc:cb	(Unknown: locally administered)
+
+2024-06-05 21:28:50,978 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+
+2024-06-05 21:29:02,082 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+
+2024-06-05 21:29:13,186 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+
+2024-06-05 21:29:22,179 - discord.client - ERROR - Attempting a reconnect in 0.48s
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/discord/client.py", line 659, in connect
+    await self.ws.poll_event()
+  File "/usr/lib/python3/dist-packages/discord/gateway.py", line 646, in poll_event
+    raise ConnectionClosed(self.socket, shard_id=self.shard_id, code=code) from None
+discord.errors.ConnectionClosed: Shard ID None WebSocket closed with 1000
+2024-06-05 21:29:24,310 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+
+2024-06-05 21:29:34,715 - discord.client - ERROR - Attempting a reconnect in 1.33s
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 1152, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/asyncio/base_events.py", line 867, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/socket.py", line 962, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno -2] Name or service not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/discord/client.py", line 656, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/asyncio/tasks.py", line 479, in wait_for
+    return fut.result()
+           ^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/discord/http.py", line 536, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 1166, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [Name or service not known]
+2024-06-05 21:29:35,386 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+
+2024-06-05 21:29:39,133 - discord.client - ERROR - Attempting a reconnect in 1.04s
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 1152, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/asyncio/base_events.py", line 867, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/socket.py", line 962, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno -2] Name or service not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/discord/client.py", line 656, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/asyncio/tasks.py", line 479, in wait_for
+    return fut.result()
+           ^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/discord/http.py", line 536, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 1166, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [Name or service not known]
+2024-06-05 21:29:42,205 - discord.client - ERROR - Attempting a reconnect in 4.70s
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 1152, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/asyncio/base_events.py", line 867, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/socket.py", line 962, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno -2] Name or service not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/discord/client.py", line 656, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/asyncio/tasks.py", line 479, in wait_for
+    return fut.result()
+           ^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/discord/http.py", line 536, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 1166, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [Name or service not known]
+2024-06-05 21:29:46,514 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+
+2024-06-05 21:29:51,238 - discord.gateway - INFO - Shard ID None has successfully RESUMED session 76b748254c895aa01088801622958c7e.
+2024-06-05 21:29:57,694 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+
+2024-06-05 21:30:08,842 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+
+2024-06-05 21:30:19,982 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+
+2024-06-05 21:30:31,066 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+192.168.0.1	6a:89:aa:10:cc:cb	(Unknown: locally administered)
+
+2024-06-05 21:30:42,278 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+
+2024-06-05 21:30:53,462 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+
+2024-06-05 21:31:04,566 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+
+2024-06-05 21:31:15,766 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+
+2024-06-05 21:31:26,978 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+
+2024-06-05 21:31:38,210 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+
+2024-06-05 21:31:49,390 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+
+2024-06-05 21:32:00,478 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+
+2024-06-05 21:32:11,015 - discord.client - ERROR - Attempting a reconnect in 15.86s
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/discord/client.py", line 659, in connect
+    await self.ws.poll_event()
+  File "/usr/lib/python3/dist-packages/discord/gateway.py", line 646, in poll_event
+    raise ConnectionClosed(self.socket, shard_id=self.shard_id, code=code) from None
+discord.errors.ConnectionClosed: Shard ID None WebSocket closed with 1000
+2024-06-05 21:32:11,562 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+
+2024-06-05 21:32:22,678 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+
+2024-06-05 21:32:33,810 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+
+2024-06-05 21:32:44,862 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+
+2024-06-05 21:32:53,435 - discord_bot - ERROR - Failed to purge or send message in people-in-studio: Cannot connect to host discord.com:443 ssl:default [Connect call failed ('162.159.137.232', 443)]
+2024-06-05 21:32:53,437 - discord.client - ERROR - Attempting a reconnect in 35.62s
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 980, in _wrap_create_connection
+    return await self._loop.create_connection(*args, **kwargs)  # type: ignore[return-value]  # noqa
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/asyncio/base_events.py", line 1085, in create_connection
+    raise exceptions[0]
+  File "/usr/lib/python3.11/asyncio/base_events.py", line 1069, in create_connection
+    sock = await self._connect_sock(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/asyncio/base_events.py", line 973, in _connect_sock
+    await self.sock_connect(sock, address)
+  File "/usr/lib/python3.11/asyncio/selector_events.py", line 634, in sock_connect
+    return await fut
+           ^^^^^^^^^
+  File "/usr/lib/python3.11/asyncio/selector_events.py", line 674, in _sock_connect_cb
+    raise OSError(err, f'Connect call failed {address}')
+OSError: [Errno 113] Connect call failed ('162.159.130.234', 443)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/discord/client.py", line 656, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/asyncio/tasks.py", line 479, in wait_for
+    return fut.result()
+           ^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/discord/http.py", line 536, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 1206, in _create_direct_connection
+    raise last_exc
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 1175, in _create_direct_connection
+    transp, proto = await self._wrap_create_connection(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 988, in _wrap_create_connection
+    raise client_error(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [Connect call failed ('162.159.130.234', 443)]
+2024-06-05 21:32:55,978 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+192.168.0.1	6a:89:aa:10:cc:cb	(Unknown: locally administered)
+
+2024-06-05 21:33:07,126 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+
+2024-06-05 21:33:18,266 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+
+2024-06-05 21:33:29,346 - arp_scan - ERROR - ARP scan failed: Interface: wlan0, type: EN10MB, MAC: d8:3a:dd:36:a1:e0, IPv4: 192.168.0.12
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+
+2024-06-05 21:33:38,346 - discord_bot - ERROR - Failed to purge or send message in people-in-studio: Cannot connect to host discord.com:443 ssl:default [Temporary failure in name resolution]
+2024-06-05 21:34:29,122 - discord.client - ERROR - Attempting a reconnect in 102.93s
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/asyncio/tasks.py", line 490, in wait_for
+    return fut.result()
+           ^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/discord/http.py", line 536, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 1175, in _create_direct_connection
+    transp, proto = await self._wrap_create_connection(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 980, in _wrap_create_connection
+    return await self._loop.create_connection(*args, **kwargs)  # type: ignore[return-value]  # noqa
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/asyncio/base_events.py", line 1069, in create_connection
+    sock = await self._connect_sock(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/asyncio/base_events.py", line 973, in _connect_sock
+    await self.sock_connect(sock, address)
+  File "/usr/lib/python3.11/asyncio/selector_events.py", line 634, in sock_connect
+    return await fut
+           ^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/discord/client.py", line 656, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/asyncio/tasks.py", line 492, in wait_for
+    raise exceptions.TimeoutError() from exc
+TimeoutError
+2024-06-05 21:35:38,344 - discord_bot - ERROR - Failed to purge or send message in people-in-studio: Cannot connect to host discord.com:443 ssl:default [Temporary failure in name resolution]
+2024-06-05 21:36:12,094 - discord.client - ERROR - Attempting a reconnect in 152.27s
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 1152, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/asyncio/base_events.py", line 867, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/socket.py", line 962, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/discord/client.py", line 656, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/asyncio/tasks.py", line 479, in wait_for
+    return fut.result()
+           ^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/discord/http.py", line 536, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 1166, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [Temporary failure in name resolution]
+2024-06-05 21:37:38,354 - discord_bot - ERROR - Failed to purge or send message in people-in-studio: Cannot connect to host discord.com:443 ssl:default [Temporary failure in name resolution]
+2024-06-05 21:38:44,430 - discord.client - ERROR - Attempting a reconnect in 271.88s
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 1152, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/asyncio/base_events.py", line 867, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/socket.py", line 962, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/discord/client.py", line 656, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/asyncio/tasks.py", line 479, in wait_for
+    return fut.result()
+           ^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/discord/http.py", line 536, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 1166, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [Temporary failure in name resolution]
+2024-06-05 21:39:38,349 - discord_bot - ERROR - Failed to purge or send message in people-in-studio: Cannot connect to host discord.com:443 ssl:default [Temporary failure in name resolution]
+2024-06-05 21:41:38,350 - discord_bot - ERROR - Failed to purge or send message in people-in-studio: Cannot connect to host discord.com:443 ssl:default [Temporary failure in name resolution]
+2024-06-05 21:43:16,385 - discord.client - ERROR - Attempting a reconnect in 137.73s
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 1152, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/asyncio/base_events.py", line 867, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/socket.py", line 962, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/discord/client.py", line 656, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/asyncio/tasks.py", line 479, in wait_for
+    return fut.result()
+           ^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/discord/http.py", line 536, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 1166, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [Temporary failure in name resolution]
+2024-06-05 21:43:38,352 - discord_bot - ERROR - Failed to purge or send message in people-in-studio: Cannot connect to host discord.com:443 ssl:default [Temporary failure in name resolution]
+2024-06-05 21:45:34,228 - discord.client - ERROR - Attempting a reconnect in 125.12s
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 1152, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/asyncio/base_events.py", line 867, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/socket.py", line 962, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/discord/client.py", line 656, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/asyncio/tasks.py", line 479, in wait_for
+    return fut.result()
+           ^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/discord/http.py", line 536, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 1166, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [Temporary failure in name resolution]
+2024-06-05 21:45:38,354 - discord_bot - ERROR - Failed to purge or send message in people-in-studio: Cannot connect to host discord.com:443 ssl:default [Temporary failure in name resolution]
+2024-06-05 21:47:38,355 - discord_bot - ERROR - Failed to purge or send message in people-in-studio: Cannot connect to host discord.com:443 ssl:default [Temporary failure in name resolution]
+2024-06-05 21:47:39,358 - discord.client - ERROR - Attempting a reconnect in 852.03s
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 1152, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/asyncio/base_events.py", line 867, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/socket.py", line 962, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/discord/client.py", line 656, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/asyncio/tasks.py", line 479, in wait_for
+    return fut.result()
+           ^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/discord/http.py", line 536, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 1166, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [Temporary failure in name resolution]
+2024-06-05 21:49:38,357 - discord_bot - ERROR - Failed to purge or send message in people-in-studio: Cannot connect to host discord.com:443 ssl:default [Temporary failure in name resolution]
+2024-06-05 21:51:38,358 - discord_bot - ERROR - Failed to purge or send message in people-in-studio: Cannot connect to host discord.com:443 ssl:default [Temporary failure in name resolution]
+2024-06-05 21:53:38,360 - discord_bot - ERROR - Failed to purge or send message in people-in-studio: Cannot connect to host discord.com:443 ssl:default [Temporary failure in name resolution]
+2024-06-05 21:55:38,361 - discord_bot - ERROR - Failed to purge or send message in people-in-studio: Cannot connect to host discord.com:443 ssl:default [Temporary failure in name resolution]
+2024-06-05 21:57:38,366 - discord_bot - ERROR - Failed to purge or send message in people-in-studio: Cannot connect to host discord.com:443 ssl:default [Temporary failure in name resolution]
+2024-06-05 21:59:38,367 - discord_bot - ERROR - Failed to purge or send message in people-in-studio: Cannot connect to host discord.com:443 ssl:default [Temporary failure in name resolution]
+2024-06-05 22:01:38,369 - discord_bot - ERROR - Failed to purge or send message in people-in-studio: Cannot connect to host discord.com:443 ssl:default [Temporary failure in name resolution]
+2024-06-05 22:01:51,412 - discord.client - ERROR - Attempting a reconnect in 101.64s
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 1152, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/asyncio/base_events.py", line 867, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/socket.py", line 962, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/discord/client.py", line 656, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/asyncio/tasks.py", line 479, in wait_for
+    return fut.result()
+           ^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/discord/http.py", line 536, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 1166, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [Temporary failure in name resolution]
+2024-06-05 22:03:33,171 - discord.client - ERROR - Attempting a reconnect in 420.25s
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 1152, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/asyncio/base_events.py", line 867, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/socket.py", line 962, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/discord/client.py", line 656, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/asyncio/tasks.py", line 479, in wait_for
+    return fut.result()
+           ^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/discord/http.py", line 536, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 1166, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [Temporary failure in name resolution]
+2024-06-05 22:03:38,381 - discord_bot - ERROR - Failed to purge or send message in people-in-studio: Cannot connect to host discord.com:443 ssl:default [Temporary failure in name resolution]
+2024-06-05 22:05:38,384 - discord_bot - ERROR - Failed to purge or send message in people-in-studio: Cannot connect to host discord.com:443 ssl:default [Temporary failure in name resolution]
+2024-06-05 22:07:38,389 - discord_bot - ERROR - Failed to purge or send message in people-in-studio: Cannot connect to host discord.com:443 ssl:default [Temporary failure in name resolution]
+2024-06-05 22:09:38,394 - discord_bot - ERROR - Failed to purge or send message in people-in-studio: Cannot connect to host discord.com:443 ssl:default [Temporary failure in name resolution]
+2024-06-05 22:10:33,449 - discord.client - ERROR - Attempting a reconnect in 342.42s
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 1152, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/asyncio/base_events.py", line 867, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/socket.py", line 962, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/discord/client.py", line 656, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/asyncio/tasks.py", line 479, in wait_for
+    return fut.result()
+           ^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/discord/http.py", line 536, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 1166, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [Temporary failure in name resolution]
+2024-06-05 22:11:38,396 - discord_bot - ERROR - Failed to purge or send message in people-in-studio: Cannot connect to host discord.com:443 ssl:default [Temporary failure in name resolution]
+2024-06-05 22:13:38,401 - discord_bot - ERROR - Failed to purge or send message in people-in-studio: Cannot connect to host discord.com:443 ssl:default [Temporary failure in name resolution]
+2024-06-05 22:15:38,403 - discord_bot - ERROR - Failed to purge or send message in people-in-studio: Cannot connect to host discord.com:443 ssl:default [Temporary failure in name resolution]
+2024-06-05 22:16:15,920 - discord.client - ERROR - Attempting a reconnect in 824.14s
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 1152, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/asyncio/base_events.py", line 867, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/socket.py", line 962, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/discord/client.py", line 656, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/asyncio/tasks.py", line 479, in wait_for
+    return fut.result()
+           ^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/discord/http.py", line 536, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 1166, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [Temporary failure in name resolution]
+2024-06-05 22:17:38,408 - discord_bot - ERROR - Failed to purge or send message in people-in-studio: Cannot connect to host discord.com:443 ssl:default [Temporary failure in name resolution]
+2024-06-05 22:19:38,410 - discord_bot - ERROR - Failed to purge or send message in people-in-studio: Cannot connect to host discord.com:443 ssl:default [Temporary failure in name resolution]
+2024-06-05 22:21:38,405 - discord_bot - ERROR - Failed to purge or send message in people-in-studio: Cannot connect to host discord.com:443 ssl:default [Temporary failure in name resolution]
+2024-06-05 22:23:38,415 - discord_bot - ERROR - Failed to purge or send message in people-in-studio: Cannot connect to host discord.com:443 ssl:default [Temporary failure in name resolution]
+2024-06-05 22:25:38,419 - discord_bot - ERROR - Failed to purge or send message in people-in-studio: Cannot connect to host discord.com:443 ssl:default [Temporary failure in name resolution]
+2024-06-05 22:27:38,424 - discord_bot - ERROR - Failed to purge or send message in people-in-studio: Cannot connect to host discord.com:443 ssl:default [Temporary failure in name resolution]
+2024-06-05 22:29:38,427 - discord_bot - ERROR - Failed to purge or send message in people-in-studio: Cannot connect to host discord.com:443 ssl:default [Temporary failure in name resolution]
+2024-06-05 22:30:00,096 - discord.client - ERROR - Attempting a reconnect in 497.18s
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 1152, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/asyncio/base_events.py", line 867, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/socket.py", line 962, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/discord/client.py", line 656, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/asyncio/tasks.py", line 479, in wait_for
+    return fut.result()
+           ^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/discord/http.py", line 536, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 1166, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [Temporary failure in name resolution]
+2024-06-05 22:31:38,431 - discord_bot - ERROR - Failed to purge or send message in people-in-studio: Cannot connect to host discord.com:443 ssl:default [Temporary failure in name resolution]
+2024-06-05 22:33:38,437 - discord_bot - ERROR - Failed to purge or send message in people-in-studio: Cannot connect to host discord.com:443 ssl:default [Temporary failure in name resolution]
+2024-06-05 22:35:38,440 - discord_bot - ERROR - Failed to purge or send message in people-in-studio: Cannot connect to host discord.com:443 ssl:default [Temporary failure in name resolution]
+2024-06-05 22:37:38,443 - discord_bot - ERROR - Failed to purge or send message in people-in-studio: Cannot connect to host discord.com:443 ssl:default [Temporary failure in name resolution]
+2024-06-05 22:38:17,334 - discord.client - ERROR - Attempting a reconnect in 397.76s
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 1152, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/asyncio/base_events.py", line 867, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/socket.py", line 962, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/discord/client.py", line 656, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/asyncio/tasks.py", line 479, in wait_for
+    return fut.result()
+           ^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/discord/http.py", line 536, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 1166, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [Temporary failure in name resolution]
+2024-06-05 22:39:38,446 - discord_bot - ERROR - Failed to purge or send message in people-in-studio: Cannot connect to host discord.com:443 ssl:default [Temporary failure in name resolution]
+2024-06-05 22:41:38,449 - discord_bot - ERROR - Failed to purge or send message in people-in-studio: Cannot connect to host discord.com:443 ssl:default [Temporary failure in name resolution]
+2024-06-05 22:43:38,450 - discord_bot - ERROR - Failed to purge or send message in people-in-studio: Cannot connect to host discord.com:443 ssl:default [Temporary failure in name resolution]
+2024-06-05 22:44:55,180 - discord.client - ERROR - Attempting a reconnect in 30.75s
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 1152, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/asyncio/base_events.py", line 867, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/socket.py", line 962, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/discord/client.py", line 656, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/asyncio/tasks.py", line 479, in wait_for
+    return fut.result()
+           ^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/discord/http.py", line 536, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/aiohttp/connector.py", line 1166, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [Temporary failure in name resolution]

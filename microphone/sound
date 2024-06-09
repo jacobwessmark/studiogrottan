@@ -1,0 +1,53 @@
+import sounddevice as sd
+import numpy as np
+import paho.mqtt.client as mqtt
+import time
+import threading
+import math
+
+# Configuration
+broker_address = "192.168.0.12"  # IP address of your MQTT broker
+broker_port = 1883
+mqtt_topic_db = "studio/sound_db"    # MQTT topic for publishing dB levels
+check_interval = 300  # Time in seconds (5 minutes)
+sample_rate = 44100  # Sample rate for recording
+duration = 2  # Duration to record for dB level check, in seconds
+
+# Query available input devices
+input_devices = sd.query_devices(kind='input')
+
+# Print information about each input device
+for i, device in enumerate(input_devices):
+    print(f"Device {i}: {device['name']}")
+    print(f"   - Sample Rate: {device['default_samplerate']} Hz")
+    print(f"   - Max Input Channels: {device['max_input_channels']}")
+    print(f"   - Default Input Channel: {device['default_high_input_latency']}")
+    print()
+
+
+def on_connect(client, userdata, flags, rc):
+    print("Connected with result code "+str(rc))
+
+def db_level_check():
+    while True:
+        recording = sd.rec(int(duration * sample_rate), samplerate=sample_rate, channels=2, dtype='float64')
+        sd.wait()  # Wait until recording is finished
+        rms = np.sqrt(np.mean(recording**2))
+        db = 20 * math.log10(rms)
+        print(f"dB Level: {db} dB")
+        client.publish(mqtt_topic_db, str(db))
+        time.sleep(check_interval)
+
+client = mqtt.Client()
+client.on_connect = on_connect
+
+client.connect(broker_address, broker_port, 60)
+
+db_thread = threading.Thread(target=db_level_check)
+db_thread.start()
+
+try:
+    client.loop_forever()
+except KeyboardInterrupt:
+    print("Exiting")
+    client.disconnect()
