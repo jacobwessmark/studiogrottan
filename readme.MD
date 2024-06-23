@@ -26,29 +26,6 @@ The core of the system is a Raspberry Pi 4, which acts as the central unit, hand
 - **Discord Bot**: Facilitates interaction and monitoring via Discord.
 - **Home Assistant**: Manages smart devices and automation.
 
-## Installation
-1. **Clone the repository**:
-    ```bash
-    git clone https://github.com/jacobwessmark/studiogrottan.git
-    cd studiogrottan
-    ```
-
-2. **Install dependencies**:
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-3. **Set up MQTT Broker**:
-    Follow the [Mosquitto installation guide](https://mosquitto.org/man/mosquitto-8.html) to set up your MQTT broker.
-
-4. **Configure Home Assistant**:
-    Install Home Assistant on your Raspberry Pi and set up the required integrations. Refer to the [Home Assistant installation guide](https://www.home-assistant.io/getting-started/).
-
-5. **Run the application**:
-    ```bash
-    python main.py
-    ```
-
 ## Usage
 
 ### Discord Bot
