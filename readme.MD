@@ -26,13 +26,6 @@ The core of the system is a Raspberry Pi 4, which acts as the central unit, hand
 - **Discord Bot**: Facilitates interaction and monitoring via Discord.
 - **Home Assistant**: Manages smart devices and automation.
 
-## Usage
-
-### Discord Bot
-The Discord bot provides various commands to interact with the system:
-- **!status**: Check the current status of the studio.
-- **!whois**: See who is currently in the studio.
-
 ### MQTT
 The system uses MQTT for inter-device communication. Ensure your devices are configured to connect to the MQTT broker and subscribe to the necessary topics.
 
